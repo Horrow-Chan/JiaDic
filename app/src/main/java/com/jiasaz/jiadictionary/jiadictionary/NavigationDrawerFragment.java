@@ -94,7 +94,7 @@ public class NavigationDrawerFragment extends android.support.v4.app.Fragment {
         editor.apply();
     }
 
-    //read from sharedPreference
+    //read   from sharedPreference
     public static String readToPreferences(Context context,String preferencesName,String defaultValue){
         SharedPreferences sharedPreferences = context.getSharedPreferences(PREF_FILE_NAME,context.MODE_PRIVATE);
         return sharedPreferences.getString(preferencesName,defaultValue);

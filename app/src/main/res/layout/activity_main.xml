@@ -5,31 +5,39 @@
     android:layout_width="match_parent"
     android:id="@+id/drawer_layout">
 
-    <RelativeLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/main_content"
-        tools:context="com.jiasaz.jiadictionary.jiadictionary.MainActivity">
+        android:orientation="vertical">
 
+        <!--This is the toolbar which is used instead of actionbar-->
         <include
             android:id="@+id/app_bar"
             layout="@layout/app_bar"/>
 
-        <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/app_bar"
-            android:id="@+id/textView2" />
+            android:id="@+id/tv"
+            android:textSize="40dp"
+            android:text="HELLO" />
+        <!--The main content view-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/contenttobereplaced">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button"
-            android:onClick="newActivity"
-            android:layout_below="@+id/textView2"
-            android:layout_alignParentStart="true" />
-
-    </RelativeLayout>
+            <Button
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Button"
+                android:onClick="Clicked"
+                android:id="@+id/button"
+                android:layout_gravity="left|top" />
+        </FrameLayout>
+    </LinearLayout>
 
     <!-- call navigation drawer fragment xml-->
     <fragment android:layout_width="@dimen/navigation_drawer_width"
