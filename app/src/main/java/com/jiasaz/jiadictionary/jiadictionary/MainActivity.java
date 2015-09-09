@@ -8,18 +8,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     //create toolbar object to be used as action bar
     private Toolbar toolbar;
     private DrawerLayout mDrawerLayout;
-
+    protected int menu_position;
     private String[] menuTitle;
     private CharSequence mTitle;
     private ListView mDrawerList;
@@ -33,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
         //create a toolbar instead of actionbar because of android material design and update requirements
         toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
-
+        setTitle(R.string.title_activity_main);
         //Possible Error ? don't know how to fix "Yet"
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
         Log.i("ACTIVITY MAIN ON CREAT","ON CREATE");
     }
 
+
 //    this class is responsible for the clicking of navigation drawer list items
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
 
@@ -60,13 +62,14 @@ public class MainActivity extends AppCompatActivity {
         public void onItemClick(AdapterView parent, View view, int position, long id) {
             //selectItem(position);
 
-            TextView tv = (TextView) findViewById(R.id.tv);
-            tv.setText("The position is " + position);
-
+             menu_position = position;
             if (position == 1){
                 switchContent(new FragmentTest());
             }else if (position == 3){
                 switchContent(new Setting());
+                Log.i("Main activity", "switch content to setting fragment");
+            }else if (position == 2){
+                switchContent(new NewAccount());
             }
 
             mDrawerList.setItemChecked(position,true);
@@ -86,5 +89,24 @@ public class MainActivity extends AppCompatActivity {
     public void setTitle(CharSequence title) {
         mTitle = title;
         toolbar.setTitle(mTitle);
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu){
+        if (menu_position == 2) {
+            getMenuInflater().inflate(R.menu.menu_main, menu);
+            return true;
+        }
+        else return false;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item){
+
+        if ( item.getItemId() ==  R.id.close){
+            //invoke the home fragment
+        }
+        return true;
     }
 }

@@ -1,22 +1,28 @@
 <resources>
     <string name="app_name">JiaDictionary</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Home</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <!--strings used to indicate drawer action-->
     <string name="open_drawer">Open</string>
     <string name="close_drawer">Close</string>
 
+    <!-- List of items used in navigation drawer -->
     <string-array name="navigation_menu">
-        <item>Main Page</item>
+        <item>Home</item>
         <item>My Word</item>
         <item>My Account</item>
         <item>Setting</item>
     </string-array>
     
-    
-<!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_account">Account</string>
+
+    <!--Texts used in setting_fragment -->
+    <string name="sync_data">Sync Data</string>
+    <string name="synch_my_words">SYNCHRONIZE MY WORDS</string>
+    <string name="profile_setting">Profile Setting</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
 </resources>

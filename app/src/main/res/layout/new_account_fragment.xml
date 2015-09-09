@@ -1,48 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textStyle="bold"
-        android:text="@string/sync_data"
-        android:textSize="14sp"/>
-
-    <Button
-        android:textColor="@color/primaryColor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:text="@string/synch_my_words"
-        android:gravity="left|center_vertical" />
-
-
-    <TextView
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
-        android:textStyle="bold"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/profile_setting"
-        android:textSize="14sp"/>
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
     <ImageView
         android:layout_width="161dp"
         android:layout_height="211dp"
         android:id="@+id/image_view_profile"
         android:src="@mipmap/propic"
         android:layout_gravity="center_horizontal"/>
-        <!--android:adjustViewBounds="true"-->
+    <!--android:adjustViewBounds="true"-->
 
 
     <LinearLayout
@@ -67,16 +35,12 @@
             android:background="@color/white"
             android:layout_weight="1"/>
     </LinearLayout>
-    </LinearLayout>
+
 
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/username"
-        android:inputType="text"
-        android:textSize="14sp"/>
-    <EditText
-        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_height="wrap_content"
         android:hint="@string/email"
         android:inputType="textWebEmailAddress"
@@ -84,6 +48,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:hint="@string/password"
         android:inputType="textPassword"
         android:textSize="14sp" />
