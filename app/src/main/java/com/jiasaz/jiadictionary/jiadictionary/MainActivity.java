@@ -7,7 +7,6 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -38,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         //Possible Error ? don't know how to fix "Yet"
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        switchContent(new Home());
+
         //Navigation list items
         //get string array for the menu
         menuTitle = getResources().getStringArray(R.array.navigation_menu);
@@ -49,13 +50,12 @@ public class MainActivity extends AppCompatActivity {
         mDrawerList.setOnItemClickListener(new DrawerItemClickListener());
         //create a navigation drawer object and pass the navigation drawer fragment to it
         NavigationDrawerFragment drawerFragment;
-        drawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.fragement_navigation_drawer);
-        drawerFragment.setUp(R.id.fragement_navigation_drawer,(DrawerLayout)findViewById(R.id.drawer_layout),toolbar);
-        Log.i("ACTIVITY MAIN ON CREAT","ON CREATE");
+        drawerFragment = (NavigationDrawerFragment) getFragmentManager().findFragmentById(R.id.fragement_navigation_drawer);
+        drawerFragment.setUp(R.id.fragement_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
+
     }
 
-
-//    this class is responsible for the clicking of navigation drawer list items
+    //    this class is responsible for the clicking of navigation drawer list items
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
 
         @Override
@@ -63,12 +63,15 @@ public class MainActivity extends AppCompatActivity {
             //selectItem(position);
 
              menu_position = position;
-            if (position == 1){
-                switchContent(new FragmentTest());
+            if (position == 0){
+                switchContent(new Home());
+            }else if (position == 1){
+                switchContent(new NewAccount());
+            }else if (position== 2){
+                switchContent(new Account());
             }else if (position == 3){
                 switchContent(new Setting());
-                Log.i("Main activity", "switch content to setting fragment");
-            }else if (position == 2){
+            }else if (position == 4){
                 switchContent(new NewAccount());
             }
 
@@ -85,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
         transaction.commit();
     }
 
-
+    //Method that sets title of the toolbar
     public void setTitle(CharSequence title) {
         mTitle = title;
         toolbar.setTitle(mTitle);
@@ -95,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu){
         if (menu_position == 2) {
-            getMenuInflater().inflate(R.menu.menu_main, menu);
             return true;
         }
         else return false;
@@ -104,9 +106,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item){
 
-        if ( item.getItemId() ==  R.id.close){
-            //invoke the home fragment
-        }
         return true;
     }
 }

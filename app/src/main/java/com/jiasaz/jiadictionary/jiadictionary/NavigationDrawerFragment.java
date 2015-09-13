@@ -1,6 +1,7 @@
 package com.jiasaz.jiadictionary.jiadictionary;
 
 
+import android.app.Fragment;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,7 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.support.v7.widget.Toolbar;
 
-public class NavigationDrawerFragment extends android.support.v4.app.Fragment {
+public class NavigationDrawerFragment extends Fragment {
 
     //public constant that will be the name of the file we use in shared preference
     public static final String PREF_FILE_NAME="testpref";

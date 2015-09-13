@@ -6,4 +6,36 @@
     <color name="popUpColor">#EC407A</color>
     <color name="textColorPrimary">#FFFF</color>
     <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="background_color">#BDBDBD</color>
+
+    <!-- Buttons Colors-->
+    <color name="color1">#FF9500</color>
+    <color name="color2">#FFDB4C</color>
+    <color name="color3">#52EDC7</color>
+    <color name="color4">#34AADC</color>
+    <color name="color5">#5AC8FB</color>
+    <color name="color6">#FF2D55</color>
+    <color name="color7">#FF9500</color>
+    <color name="color8">#C86EDF</color>
+    <color name="color9">#4A4A4A</color>
+    <color name="color10">#5856D6</color>
+    <color name="color11">#D6CEC3</color>
+    <color name="color12">#4CD964</color>
+    <color name="color13">#007AFF</color>
+    <color name="color14">#A4E786</color>
+    <color name="color15">#FF5B37</color>
+    <color name="color16">#FF4981</color>
+    <color name="color17">#FF9500</color>
+    <color name="color18">#FFDB4C</color>
+    <color name="color19">#52EDC7</color>
+    <color name="color20">#34AADC</color>
+    <color name="color21">#5AC8FB</color>
+    <color name="color22">#FF2D55</color>
+    <color name="color23">#FF9500</color>
+    <color name="color24">#C86EDF</color>
+    <color name="color25">#4A4A4A</color>
+    <color name="color26">#5856D6</color>
+
 </resources>

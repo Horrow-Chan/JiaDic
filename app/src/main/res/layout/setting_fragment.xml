@@ -3,11 +3,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/white">
+    android:background="@color/background_color">
 
     <TextView
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textStyle="bold"
@@ -26,8 +28,9 @@
 
     <TextView
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
         android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/profile_setting"
@@ -41,8 +44,8 @@
         android:layout_height="211dp"
         android:id="@+id/image_view_profile"
         android:src="@mipmap/propic"
+        android:contentDescription="@string/profile"
         android:layout_gravity="center_horizontal"/>
-        <!--android:adjustViewBounds="true"-->
 
 
     <LinearLayout
@@ -63,6 +66,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/image_button_attachfle"
+            android:contentDescription="@string/attach"
             android:src="@mipmap/attach_file"
             android:background="@color/white"
             android:layout_weight="1"/>
@@ -73,26 +77,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/username"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="text"
         android:textSize="14sp"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/email"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="textWebEmailAddress"
         android:textSize="14sp"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/password"
+        android:textColorHint="@color/white"
+        android:textColor="@color/white"
         android:inputType="textPassword"
         android:textSize="14sp" />
 
     <ImageButton
+        android:contentDescription="@string/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@mipmap/arrow_right"
         android:background="@color/white"
         android:layout_gravity="center_horizontal"
         android:id="@+id/image_button_next"/>
+
 </LinearLayout>

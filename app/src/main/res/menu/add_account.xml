@@ -4,7 +4,8 @@
     tools:context="com.jiasaz.jiadictionary.jiadictionary.MainActivity">
 
     <item
-        android:title="@string/close_drawer"
-        android:id="@+id/close"
+        android:title="@string/register"
+        android:icon="@mipmap/user_plus"
+        android:id="@+id/register"
         app:showAsAction="always"/>
 </menu>

@@ -4,6 +4,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="register">Register</string>
 
     <!--strings used to indicate drawer action-->
     <string name="open_drawer">Open</string>
@@ -16,7 +17,48 @@
         <item>My Account</item>
         <item>Setting</item>
     </string-array>
-    
+
+    <!-- Category spinner -->
+    <string-array name="category">
+        <item>Medical</item>
+        <item>Engineering</item>
+        <item>Law</item>
+        <item>Buisness</item>
+    </string-array>
+
+    <!-- Language selection -->
+    <string-array name="languages">
+        <item>English</item>
+        <item>Kurdish</item>
+        <item>Arabic</item>
+        <item>Persian</item>
+        <item>Turkish</item>
+    </string-array>
+
+    <!-- Items in Home -->
+    <string name="swap_input">Swap inputs</string>
+    <string name="language">Choose language</string>
+    <string name="info">Type a word</string>
+
+    <!-- List of strings in myWordFragment -->
+    <string name="description_of_myword">MY WORDS, LET YOU EASILY TO ACCESS YOUR WORDS
+        IN ANY PLATFORM AND IMPROVE KURDISH WORDS FOR RESEARCH AND WORD(S) WAREHOUSE</string>
+    <string name="department">Type, ex (Software, Dentistry)</string>
+    <string name="english">English Word</string>
+    <string name="kurdish">Kurdish Word</string>
+    <string name="arabic">Arabic Word</string>
+    <string name="persian">Persian Word</string>
+    <string name="turkish">Turkish Word</string>
+
+    <!--List of Description-->
+    <string name="lock">Lock Image</string>
+    <string name="next">Confirm</string>
+    <string name="circle">Logo</string>
+    <string name="at">At symbol</string>
+    <string name="profile">Profile Picture</string>
+    <string name="camera">Take a picture</string>
+    <string name="attach">Attach a file</string>
+    <string name="voicesearch">Voice Search</string>
 
     <!--Texts used in setting_fragment -->
     <string name="sync_data">Sync Data</string>
@@ -25,4 +67,35 @@
     <string name="username">Username</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+
+
+    <!--List of English Letters -->
+    <string-array name="english_letters">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
 </resources>
